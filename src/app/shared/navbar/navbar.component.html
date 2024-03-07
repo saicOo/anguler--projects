@@ -1,0 +1,89 @@
+<header>
+<!-- nav bar top -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Shopping Cart ({{totalItem}})</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/checkout">Checkout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">My Account</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2 search" type="text" [(ngModel)]="searchTerm"  (keyup)="search($event)" placeholder="search products">
+        <i class="fa fa-search"></i>
+      </div>
+      <span class="shopping-cart mt-md-0 mt-4 d-block">
+        <i routerLink="/cart" class="fas fa-shopping-cart"></i>
+        {{grandTotal}}$</span>
+      </div>
+    </div>
+  </nav>
+<!-- navigation cllection top -->
+  <nav class="nav-colletions navbar navbar-expand-lg navbar-light bg-light d-lg-block d-none">
+    <div class="container ">
+    <div class="collapse navbar-collapse" >
+      <ul class="navbar-nav m-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/AllCollection">Collection<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/CollectionFmale">Woman</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/CollectionMale">Men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink=""><img src="../../../assets/image/logo.png" alt=""></a>
+        </li>
+          <li class="nav-item">
+            <a  class="nav-link" routerLink="/CollectionSpring">spring</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" routerLink="/CollectionSummer">Summer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/CollectionWinter">Winter</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+</header>
+<!-- navigation cllection left -->
+<div #box class="main-nav-collection navbar-expand-lg navbar-light bg-light d-lg-none d-block">
+  <div class="toggle-collection" (click)="open(box,spin)"><i #spin class="fas fa-fan fan-icon"></i></div>
+  <div class="nav-collection-content">
+      <ul class="navbar-nav m-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/AllCollection">Collection<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/CollectionFmale">Woman</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/CollectionMale">Men</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink=""><img src="./././././././assets/image/logo.png" alt=""></a>
+    </li>
+      <li class="nav-item">
+        <a  class="nav-link" routerLink="/CollectionSpring">spring</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" routerLink="/CollectionSummer">Summer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/CollectionWinter">Winter</a>
+      </li>
+  </ul>
+  </div>
+</div>

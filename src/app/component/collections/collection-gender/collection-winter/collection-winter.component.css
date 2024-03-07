@@ -1,0 +1,53 @@
+.collection{
+  padding-top: 150px;
+}
+.landing{
+  margin-top: 60px;
+}
+.landing h3{
+  color: var(--main-color);
+}
+.landing p{
+  color: #999;
+  margin: 20px 0;
+}
+.card{
+  text-align: center;
+  overflow: hidden;
+  border-color: #d2985e65;
+  position: relative;
+  cursor: pointer;
+}
+.card-body{
+  padding-top: 10px;
+}
+
+.image-card{
+  overflow: hidden;
+  height: 300px;
+}
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 15px;
+  transition: 0.3s ease-in-out ;
+
+}
+.card img:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+  }
+.card-title{
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100ch;
+}
+
+.card-price{
+color: var(--main-color);
+font-weight: bold;
+}

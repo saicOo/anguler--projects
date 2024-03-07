@@ -1,0 +1,116 @@
+<div class="add-collection">
+  <h1 class="text-center my-4">Add collection</h1>
+  <div class="container col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group">
+          <!-- Input collection Name -->
+          <label> collection title</label>
+          <input #title="ngModel" required [(ngModel)]="object.title" placeholder="collection title" type="text"
+            class="form-control">
+          <div *ngIf="title.invalid && title.touched" class="alert alert-danger" role="alert">
+            pleass Enter Valid Data
+          </div>
+        </div>
+        <!-- Input collection description -->
+        <div class="form-group">
+          <label for="description"> collection description</label>
+          <textarea #description="ngModel" required [(ngModel)]="object.description" placeholder="collection description" name="description" id="description" cols="30" rows="5" class="form-control "></textarea>
+          <div *ngIf="description.invalid && description.touched" class="alert alert-danger" role="alert">
+            pleass Enter Valid Data
+          </div>
+        </div>
+        <!-- Input collection price -->
+        <div class="form-group">
+          <label> collection price</label>
+          <input #price="ngModel" required [(ngModel)]="object.price" placeholder="collection price"
+            min="100" max="5000" type="number" class="form-control">
+          <div *ngIf="price.invalid && price.touched" class="alert alert-danger" role="alert">
+            pleass Enter Valid Data
+          </div>
+        </div>
+        <!-- Input collection Image -->
+        <div class="row">
+          <div class="form-group col-sm-4">
+            <label> collection image 1</label>
+            <input [(ngModel)]="object.image[0]" placeholder="collection image Url"
+              type="text" class="form-control">
+          </div>
+          <div class="form-group col-sm-4 ">
+            <label> collection image 2</label>
+            <input [(ngModel)]="object.image[1]" placeholder="collection image Url"
+              type="text" class="form-control">
+          </div>
+          <div class="form-group col-sm-4">
+            <label> collection image 3</label>
+            <input [(ngModel)]="object.image[2]" placeholder="collection image Url"
+              type="text" class="form-control">
+          </div>
+        </div>
+        <!-- Input collection gender-->
+        <fieldset class="form-group row text-center py-3">
+          <div class="form-check col-3">
+            <input [(ngModel)]="object.gender" class="form-check-input" type="radio" name="gridRadios" id="Men"
+              value="male" checked>
+            <label class="form-check-label" for="Men">
+              Men
+            </label>
+          </div>
+          <div class="form-check col-4">
+            <input [(ngModel)]="object.gender" class="form-check-input" type="radio" name="gridRadios" id="Women" value="fmale">
+            <label class="form-check-label" for="Women">
+              Women
+            </label>
+          </div>
+        </fieldset>
+        <!-- ========= -->
+        <div class="row">
+          <!-- Input collection Size-->
+          <div class="form-group col-md-4">
+            <label for="size">Size select</label>
+            <select [(ngModel)]="object.size" class="form-control" id="size">
+              <option>sm</option>
+              <option>l</option>
+              <option>xl</option>
+              <option>xxl</option>
+              <option>xxxl</option>
+            </select>
+          </div>
+          <!-- Input collection category-->
+          <div class="form-group col-md-4">
+            <label for="category">category select</label>
+            <select [(ngModel)]="object.category" class="form-control" id="category">
+              <option>summer</option>
+              <option>spring</option>
+              <option>winter</option>
+            </select>
+          </div>
+          <!-- Input collection popular-->
+          <div class="form-group col-md-4">
+            <label for="popular">popular select</label>
+            <select [(ngModel)]="object.popular" class="form-control" id="popular">
+              <option>trending</option>
+              <option>bestsellers</option>
+              <option>new</option>
+              <option>on sale</option>
+            </select>
+          </div>
+        </div>
+        <!-- Button Add Data -->
+        <div *ngIf="title.valid && description.valid && price.valid" class="text-center">
+          <button (click)="save(title,description)" class="btn btn-outline-success btn-black w-50 mx-auto my-2">Send
+            Data</button>
+        </div>
+        <div *ngIf="title.invalid || description.invalid || price.invalid" class="text-center">
+          <button disabled class="btn btn-outline-success btn-black w-50 mx-auto my-2">Send Data</button>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-around mt-4">
+      <div class="col-6"><a routerLink="/Account">back account control</a></div>
+      <div class="col-6 text-right"><a routerLink="/AllCollection">Go to Collection</a></div>
+    </div>
+  </div>
+</div>
+
+

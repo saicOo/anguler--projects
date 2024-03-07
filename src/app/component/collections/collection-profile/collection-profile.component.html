@@ -1,0 +1,37 @@
+<div class="profile">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 p-4">
+        <div class="collection-image">
+        <div class="row"  >
+          <div class="col-12 ">
+              <img [src]="productList.image[displayedimg]" alt="">
+          </div>
+          <div class="col-4 py-2" *ngFor="let img of productList.image; let i =index">
+            <img [src]="img" alt="" (mouseenter)="displayedimg = i">
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-6 p-4">
+        <div class="dis-head">
+          <h3>{{productList.title}}</h3>
+          <hr>
+          <h5>${{productList.price}}</h5>
+        </div>
+        <div class="dis-center">
+          <div>Size: <span class="size">{{productList.size}}</span></div>
+          <div>popular: <span class="popular">{{productList.popular}}</span></div>
+          <div>Gender: <span class="popular">{{productList.gender}}</span></div>
+        </div>
+        <button class="btn w-100 my-4" (click)="addToCart(productList)">BUY THIS ITEM</button>
+        <div class="dis-bottom">
+          <h4>DETAIL :</h4>
+          <p>{{productList.description}}.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

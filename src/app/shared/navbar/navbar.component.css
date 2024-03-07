@@ -1,0 +1,90 @@
+img{
+  height: 50px;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 500;
+}
+.nav-colletions{
+  top: 56px;
+}
+@media (max-width: 987px){
+  .nav-colletions{
+    width: fit-content;
+    top: 261px;
+    left: -54px;
+    padding-left: 38px;
+  }
+}
+.navbar-expand-lg .navbar-nav .nav-link
+{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.shopping-cart{
+margin-left: 20px;
+background-color: #fff;
+padding-right: 10px;
+width: fit-content;
+}
+.shopping-cart i{
+margin-right: 10px;
+background-color: var(--main-color);
+height: 100%;
+padding: 10px;
+color: #fff;
+cursor: pointer;
+}
+.form-inline{
+  position: relative;
+  width: fit-content;
+}
+.search{
+  padding-right: 40px;
+}
+.search:focus{
+  border-color: var(--main-color);
+}
+.fa-search{
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  color: var(--main-color);
+}
+
+/* navigation cllection left */
+.main-nav-collection{
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: #fff;
+  z-index: 499;
+  width: 200px;
+  min-height: 100vh;
+  transition: .3s;
+  }
+  .nav-collection-content{
+    padding-top: 100px;
+  }
+  .main-nav-collection.open{
+      left: 0;
+  }
+  .main-nav-collection .toggle-collection{
+  position: absolute;
+  right: -30px;
+  top: 240px;
+  background-color: #f8f9fa;
+  text-align: center;
+  transition: .3s;
+  cursor: pointer;
+  }
+  .main-nav-collection .toggle-collection .fan-icon{
+      padding: 7px 0;
+      width: 30px;
+      color: var(--main-color);
+  }

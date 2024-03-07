@@ -1,0 +1,36 @@
+.home{
+  padding-top: 100px;
+  background-color: #343a40;
+}
+.carousel-item{
+  height: 80vh;
+}
+.carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-caption {
+background-color: #f9f9f9;
+right: 100%;
+left: 0;
+bottom: 50%;
+padding: 30px 30px 30px 60px;
+text-align: left;
+transform: translateY(50%);
+width: 600px;
+}
+.carousel-caption  h1{
+  color: var(--main-color);
+}
+.carousel-caption  p{
+  margin: 30px 0;
+  color: #777;
+}
+.carousel-caption  a{
+  text-decoration: none;
+  padding: 9px 16px;
+  color: var(--main-color);
+border: 1px solid var(--main-color);
+font-weight: bold;
+}

@@ -1,0 +1,45 @@
+<div class="delete-collection">
+  <h1 class="text-center my-4">delete collection</h1>
+  <div class="container col-md-6">
+    <div class="card remove">
+      <div class="card-body">
+
+        <!-- Input collection id -->
+        <div class="form-group">
+          <label> collection id</label>
+          <input (change)="print(object.id)" #id="ngModel" required [(ngModel)]="object.id" placeholder="collection id"
+          min="1" max="{{objectLength}}" type="number" class="form-control">
+          <div *ngIf="id.invalid && id.touched" class="alert alert-danger" role="alert">
+            pleass Enter Valid Data
+          </div>
+        </div>
+        <div class="prudect" *ngIf="object.title != null">
+          <div class="row py-4 justify-content-center">
+            <div class="py-4 col-sm-8 col-md-6 col-lg-4">
+              <div class="card" [routerLink]="['/CollectionProfile' ,object.id]">
+                <div class="image-card">
+                  <img src="{{object.image[0]}}"  alt="...">
+                </div>
+                <div class="card-body">
+                  <h6 class="card-title">{{object.title}}</h6>
+                  <p class="card-price">${{object.price}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+        <!-- Button Add Data -->
+        <div *ngIf="id.valid" class="text-center">
+          <button (click)="remove(object.id)" class="btn btn-outline-success btn-black w-50 mx-auto my-2">Delete Collection</button>
+        </div>
+        <div *ngIf="id.invalid" class="text-center">
+          <button disabled class="btn btn-outline-success btn-black w-50 mx-auto my-2">Delete Collection</button>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-around mt-4">
+      <div class="col-6"><a routerLink="/Account">back account control</a></div>
+      <div class="col-6 text-right"><a routerLink="/AllCollection">Go to Collection</a></div>
+    </div>
+  </div>
+</div>
